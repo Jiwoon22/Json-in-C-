@@ -8,11 +8,15 @@
 ![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/27d0b706-0317-4303-a72f-9cd3b7862962)
 
 
+
+
 - txt파일에 json데이터 Write
 
   ![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/4a5f35c6-e095-4e10-b604-cddb574a94b6)
 
+
   ------------------------------------------------------------------------------------------------
+  
 
   * 1. 파일 경로 지정
        => string 파일경로 변수명 = @"파일 경로\파일명.확장자";
@@ -22,7 +26,7 @@
           - JSON Object를 의미한다.
           - JObject 자체가 name을 가질 수 없다.
           - '키:값' pair를 가진다.
-          - 
+            
   * 3. JProperty("키", "값") 대입
        => new JProperty("키1", "값1"),
           new JPropeerty("키2", "값2")
