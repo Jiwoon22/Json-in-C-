@@ -9,22 +9,9 @@
 
 
 - txt파일에 json데이터 Write
- public static void Main()
-        {
-            string path = @"C:\Users\CNSI-JJW\OneDrive\바탕 화면\Office2021\ggg.txt";
-            string[] userList = new string[4] { "USER1", "USER2", "USER3", "USER4" };
-            string users = string.Empty;
-            JObject configData = new JObject(
-                new JProperty("IP", "127.0.0.1"),
-                new JProperty("PORT", "8888"),
-                new JProperty("DATABASE", "DB TEST"),
-                new JProperty("ID", "TEST ID"),
-                new JProperty("PASSWORD", "1234")
-            );
-            configData.Add("USERS", JArray.FromObject(userList));
-            File.WriteAllText(path, configData.ToString());
-        }
-  
+
+  ![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/4a5f35c6-e095-4e10-b604-cddb574a94b6)
+
   ------------------------------------------------------------------------------------------------
 
   * 1. 파일 경로 지정
