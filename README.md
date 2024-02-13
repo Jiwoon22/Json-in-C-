@@ -34,9 +34,13 @@ JToken은 LINQ를 사용하여 쿼리할 수 있으며, Children(), Descendants(
 - JProperty
 
 JProperty는 JSON 객체 안에서의 키와 값의 쌍을 나타냅니다.
+
 JSON 객체의 속성을 표현하며, JToken의 파생 클래스입니다.
+
 JProperty는 키와 값을 직접 접근할 수 있으며, 이는 Name 및 Value 속성을 통해 이루어집니다.
+
 예를 들어, JSON 객체에서 특정 키의 값을 찾거나 변경하는 데 사용됩니다.
+
 
 
 
