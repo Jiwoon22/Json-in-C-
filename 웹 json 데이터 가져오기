@@ -1,3 +1,45 @@
+static void Main(string[] args)
+        {
+            Task task = test();
+            task.Wait();
+        }
+        static async Task test() { 
+            // JSON 데이터를 가져올 URL
+            string url = "http://1.1.1.1";
+
+            // HttpClient 인스턴스 생성
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    // URL에서 JSON 데이터 가져오기
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    response.EnsureSuccessStatusCode(); // 요청이 성공적인지 확인
+
+                    // JSON 데이터를 문자열로 읽기
+                    string jsonContent = await response.Content.ReadAsStringAsync();
+
+                    // JSON 문자열을 JObject로 파싱
+                    JObject jsonObject = JObject.Parse(jsonContent);
+
+                    JToken token = jsonObject;
+                    foreach (JToken jtoken in token.Children())
+                    {
+                        Console.WriteLine(jtoken);
+                    }
+                }
+                catch (HttpRequestException e)
+                {
+                    Console.WriteLine($"HTTP 오류 발생: {e.Message}");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"오류 발생: {e.Message}");
+                }
+            }
+        }
+
+
 1. using
 using 문은 3가지 주요 기능을 수행한다.
 
@@ -20,4 +62,45 @@ using 문을 사용하면 개발자가 명시적으로 리소스를 해제하지
 =>HttpClient는 IDisposable 인터페이스를 구현하고 있으며, 네트워크 리소스를 사용하는 경우이기 때문에 using문을 사용하여 해당 리소스를 관리하는 것이 좋다.
 따라서 using (HttpClient client = new HttpClient())코드는 HttpClient 인스턴스를 생성하고 사용한 후에 자동으로 정리하는 데 사용된다.
 
-2. HttpClient 자료형
+2. HttpClient 클래스
+HttpClient 클래스는 .NET Framework에서 제공하는 HTTP 클라이언트 라이브러리 중 하나로, HTTP 요청을 보내고 응답을 받는 데 사용됩니다. 
+HttpClient 클래스를 사용하여 웹 리소스에 대한 GET, POST, PUT, DELETE 등의 HTTP 요청을 보낼 수 있습니다. 
+또한, 다양한 인증 방법 및 요청 헤더, 쿠키 등의 추가적인 옵션을 설정할 수 있습니다.
+
+<HttpClient 클래스의 특징>
+-비동기 지원
+: HttpClient 클래스는 비동기 작업을 지원하여 HTTP 요청을 비동기적으로 보낼 수 있다. 이는 UI쓰레드 또는 기타 비동기 작업과 함께 사용될 때, 특히 유용하다.
+
+-HTTP 요청 및 응답 처리
+: HttpClient 클래스는 HTTP 요청을 보내고, 서버로부터의 응답을 받아들이고 처리하는 데 사용된다. 이를 통해 웹 리소스와의 통신을 쉽게 할 수 있다.
+
+-인증 및 보안
+: HttpClient는 다양한 인증 메커니즘을  지원하여 웹서버와 안전하게 통신할 수 있다. Basic 인증, OAuth 인증 등등
+
+3. HttpResponseMessage 클래스
+HttpResponseMessage 클래스는 HTTP 요청에 대한 응답을 나타내는 클래스이다.
+일반적으로 HttpClient 클래스를 사용하여 웹 서버에 HTTP 요청을 보내고, 그 결과로 HttpResponseMessage를 받게 됩니다. 
+
+HttpResponseMessage 클래스의 중요한 속성과 메서드는 다음과 같습니다:
+
+- StatusCode: HTTP 응답의 상태 코드를 가져오거나 설정합니다. 예를 들어, 200은 "OK", 404는 "Not Found" 등의 상태 코드를 나타냅니다.
+
+- Headers: HTTP 응답의 헤더 컬렉션을 가져옵니다. 이 컬렉션은 HttpResponseHeaders 클래스의 인스턴스로, 각 헤더에 대한 정보를 제공합니다.
+
+- Content: HTTP 응답의 내용을 나타내는 HttpContent 객체를 가져옵니다. 이 객체를 통해 응답 본문을 읽을 수 있습니다.
+
+- EnsureSuccessStatusCode(): HTTP 응답이 성공적인 상태 코드(200-299)를 가지고 있는지 확인합니다. 만약 응답이 성공적이지 않다면 예외를 throw합니다.
+
+- Dispose(): HttpResponseMessage 객체가 사용한 리소스를 해제합니다. 사용이 끝난 후에는 항상 Dispose() 메서드를 호출하여 리소스 누수를 방지해야 합니다.
+
+HttpResponseMessage를 사용하여 HTTP 응답을 처리하고 데이터를 추출하거나 응답의 상태를 확인할 수 있습니다. 
+이 클래스는 HTTP 통신과 관련된 C# 프로그램에서 매우 중요한 역할을 합니다.
+
+4. GetAsync
+GetAsync() 메서드는 HttpClient 클래스의 인스턴스를 사용하여 HTTP GET 요청을 비동기적으로 보내는 메서드입니다. 이 메서드를 사용하면 지정된 URI로 GET 요청을 보내고, 해당 요청에 대한 응답을 비동기적으로 받을 수 있습니다.
+응답에 대한 HttpResponseMessage 객체를 반환한다.
+
+*response.Content
+HTTP 응답의 본문을 나타내는 데 사용
+
+
