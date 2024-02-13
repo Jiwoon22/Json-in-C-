@@ -1,4 +1,3 @@
-![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/a857f6ff-fd3a-468f-a6b4-25e5d6fc09f6)# Json in C&#35;
 
 **[ json 데이터 다룰 때, 알아야 하는 필수 개념 ]**
 
