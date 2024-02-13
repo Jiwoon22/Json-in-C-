@@ -1,6 +1,6 @@
 # Json in C&#35;
 
-[json 데이터 다룰 때, 알아야 하는 필수 개념]
+**[ json 데이터 다룰 때, 알아야 하는 필수 개념 ]**
 
 - JObject
 
@@ -11,13 +11,25 @@ JObject는 특정 JSON 데이터가 객체인 경우 사용됩니다. 즉, 데�
 객체 내의 키-값 쌍을 효율적으로 다룰 수 있습니다. 예를 들어, jsonObject["key"]와 같은 형태로 특정 키의 값을 가져올 수 있습니다.
 
 
+
+
 - JToken
 
 JToken은 JSON 데이터 구조에서의 단일 요소를 나타냅니다.
+
+
 JSON의 모든 종류의 데이터 유형을 나타낼 수 있습니다. 객체, 배열, 속성, 값 등을 포함합니다.
+
+
 JObject, JArray, JProperty, JValue 등의 파생 클래스를 가집니다.
+
+
 JToken은 LINQ를 사용하여 쿼리할 수 있으며, Children(), Descendants(), SelectToken(), SelectTokens() 등의 메서드를 제공합니다.
+
+
 예를 들어, JObject나 JArray에서 특정 속성이나 요소를 찾거나 조작하는 데 사용됩니다.
+
+
 
 - JProperty
 
@@ -28,7 +40,7 @@ JProperty는 키와 값을 직접 접근할 수 있으며, 이는 Name 및 Value
 
 
 
-[데이터 직렬화 및 역직렬화]
+**[ 데이터 직렬화 및 역직렬화 ]**
 - 직렬화(Serialize): C# 개체를 JSON 문자열로 변환하는 작업
 - 역직렬화(Deserialize): JSON 문자열을 C#개체로 변환
 ![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/d0e4d69f-6ba5-4374-97c7-884d561299dd)
@@ -39,7 +51,7 @@ JProperty는 키와 값을 직접 접근할 수 있으며, 이는 Name 및 Value
 
 
 
-[txt파일에 json데이터 Write]
+**[ txt파일에 json데이터 Write ]**
 
   ![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/4a5f35c6-e095-4e10-b604-cddb574a94b6)
 
