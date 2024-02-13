@@ -1,15 +1,5 @@
 # Json in C&#35;
 
-데이터 직렬화 및 역직렬화
-- 직렬화(Serialize): C# 개체를 JSON 문자열로 변환하는 작업
-- 역직렬화(Deserialize): JSON 문자열을 C#개체로 변환
-![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/d0e4d69f-6ba5-4374-97c7-884d561299dd)
-
-  
-![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/27d0b706-0317-4303-a72f-9cd3b7862962)
-
-
-
 json 데이터 다룰 때, 알아야 하는 필수 개념
 
 - JObject
@@ -33,6 +23,15 @@ JSON 객체의 속성을 표현하며, JToken의 파생 클래스입니다.
 JProperty는 키와 값을 직접 접근할 수 있으며, 이는 Name 및 Value 속성을 통해 이루어집니다.
 예를 들어, JSON 객체에서 특정 키의 값을 찾거나 변경하는 데 사용됩니다.
 
+
+
+데이터 직렬화 및 역직렬화
+- 직렬화(Serialize): C# 개체를 JSON 문자열로 변환하는 작업
+- 역직렬화(Deserialize): JSON 문자열을 C#개체로 변환
+![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/d0e4d69f-6ba5-4374-97c7-884d561299dd)
+
+  
+![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/27d0b706-0317-4303-a72f-9cd3b7862962)
 
 
 
