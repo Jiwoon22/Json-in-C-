@@ -44,6 +44,7 @@ JProperty는 키와 값을 직접 접근할 수 있으며, 이는 Name 및 Value
   **[ 데이터 직렬화 및 역직렬화 ]**
 - 직렬화(Serialize): C# 개체를 JSON 문자열로 변환하는 작업
 - 역직렬화(Deserialize): JSON 문자열을 C#개체로 변환
+<br/> <br/> 
 ![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/d0e4d69f-6ba5-4374-97c7-884d561299dd)
 
   
@@ -51,7 +52,7 @@ JProperty는 키와 값을 직접 접근할 수 있으며, 이는 Name 및 Value
 
 
 
-
+<br/> <br/> <br/> <br/> <br/> <br/> 
 **[ txt파일에 json데이터 Write ]**
 
   ![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/4a5f35c6-e095-4e10-b604-cddb574a94b6)
