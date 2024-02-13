@@ -1,12 +1,15 @@
 # Json in C&#35;
 
-json 데이터 다룰 때, 알아야 하는 필수 개념
+[json 데이터 다룰 때, 알아야 하는 필수 개념]
 
 - JObject
 
 JObject 클래스는 JSON 객체를 나타냅니다. JSON 객체는 중괄호 {}로 둘러싸인 키-값 쌍의 집합을 의미합니다.
+
 JObject는 특정 JSON 데이터가 객체인 경우 사용됩니다. 즉, 데이터가 중괄호로 둘러싸인 경우입니다.
+
 객체 내의 키-값 쌍을 효율적으로 다룰 수 있습니다. 예를 들어, jsonObject["key"]와 같은 형태로 특정 키의 값을 가져올 수 있습니다.
+
 
 - JToken
 
@@ -25,7 +28,7 @@ JProperty는 키와 값을 직접 접근할 수 있으며, 이는 Name 및 Value
 
 
 
-데이터 직렬화 및 역직렬화
+[데이터 직렬화 및 역직렬화]
 - 직렬화(Serialize): C# 개체를 JSON 문자열로 변환하는 작업
 - 역직렬화(Deserialize): JSON 문자열을 C#개체로 변환
 ![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/d0e4d69f-6ba5-4374-97c7-884d561299dd)
@@ -36,7 +39,7 @@ JProperty는 키와 값을 직접 접근할 수 있으며, 이는 Name 및 Value
 
 
 
-- txt파일에 json데이터 Write
+[txt파일에 json데이터 Write]
 
   ![image](https://github.com/Jiwoon22/Json-in-C-/assets/51106092/4a5f35c6-e095-4e10-b604-cddb574a94b6)
 
