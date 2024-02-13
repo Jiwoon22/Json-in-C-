@@ -9,7 +9,7 @@ JObject 클래스는 JSON 객체를 나타냅니다. JSON 객체는 중괄호 {}
 JObject는 특정 JSON 데이터가 객체인 경우 사용됩니다. 즉, 데이터가 중괄호로 둘러싸인 경우입니다.
 
 객체 내의 키-값 쌍을 효율적으로 다룰 수 있습니다. 예를 들어, jsonObject["key"]와 같은 형태로 특정 키의 값을 가져올 수 있습니다.
-<br/> 
+<br/> <br/> 
 
 - JToken
 
@@ -26,7 +26,7 @@ JToken은 LINQ를 사용하여 쿼리할 수 있으며, Children(), Descendants(
 
 
 예를 들어, JObject나 JArray에서 특정 속성이나 요소를 찾거나 조작하는 데 사용됩니다.
-<br/> 
+<br/> <br/> 
 
 - JProperty
 
